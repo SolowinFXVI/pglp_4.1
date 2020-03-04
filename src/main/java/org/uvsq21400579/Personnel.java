@@ -9,9 +9,15 @@ public final class Personnel implements InterfacePersonnels {
   private final String numero_tel;
   private final String fonction;
 
+  private final int id;
+
   @Override
   public void print() {
     System.out.println(nom + " " + prenom);
+  }
+
+  public int getId() {
+    return id;
   }
 
 
@@ -23,6 +29,11 @@ public final class Personnel implements InterfacePersonnels {
 
     private String numero_tel = "";
     private String fonction = "";
+    private int id = -1;
+
+    public int getId() {
+      return id;
+    }
 
     public PersonnelBuilder(String nom, String prenom, String age) {
       this.nom = nom;
@@ -40,6 +51,11 @@ public final class Personnel implements InterfacePersonnels {
       return this;
     }
 
+    public PersonnelBuilder id(int val){
+      id = val;
+      return this;
+    }
+
     public Personnel build() {
       return new Personnel(this);
     }
@@ -51,5 +67,7 @@ public final class Personnel implements InterfacePersonnels {
     this.age = personnelBuilder.age;
     this.numero_tel = personnelBuilder.numero_tel;
     this.fonction = personnelBuilder.fonction;
+    this.id = personnelBuilder.id;
   }
+
 }

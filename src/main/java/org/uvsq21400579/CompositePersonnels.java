@@ -18,7 +18,7 @@ public class CompositePersonnels implements InterfacePersonnels {
   @Override
   public void print() {
     for (Personnel personnel : personnelsList) {
-      System.out.println(personnel);
+      System.out.println(personnel.getId());
     }
   }
 }
