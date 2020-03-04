@@ -3,21 +3,22 @@ package org.uvsq21400579;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CompositePersonnels implements InterfacePersonnels{
-    private List<Personnel> personnelsList = new ArrayList<Personnel>();
+public class CompositePersonnels implements InterfacePersonnels {
 
-    public void add(Personnel personnel){
-        personnelsList.add(personnel);
-    }
+  private List<Personnel> personnelsList = new ArrayList<Personnel>();
 
-    public void remove(Personnel personnel){
-        personnelsList.remove(personnel);
-    }
+  public void add(Personnel personnel) {
+    personnelsList.add(personnel);
+  }
 
-    @Override
-    public void print() {
-        for(Personnel personnel : personnelsList){
-            System.out.println(personnel);
-        }
+  public void remove(Personnel personnel) {
+    personnelsList.remove(personnel);
+  }
+
+  @Override
+  public void print() {
+    for (Personnel personnel : personnelsList) {
+      System.out.println(personnel);
     }
+  }
 }
