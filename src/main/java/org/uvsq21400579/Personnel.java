@@ -5,7 +5,6 @@ public final class Personnel implements InterfacePersonnels {
   private final String nom;
   private final String prenom;
   private final String age;
-
   private final String numero_tel;
   private final String fonction;
 

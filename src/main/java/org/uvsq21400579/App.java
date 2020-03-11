@@ -23,7 +23,14 @@ public class App {
     composite1.add(p1);
     composite1.add(p2);
     composite1.add(p3);
+    composite2.add(p3);
+    composite2.add(p4);
+    composite2.add(p5);
+    composite3.add(p6);
+    composite2.add(p7);
+    composite3.add(composite2);
     composite1.print();
-
+    composite2.print();
+    composite3.print();
   }
 }
